@@ -16,23 +16,24 @@
                 <p class="sub">ImageSequence — Visual-Temporal Reasoning Benchmark</p>
             </div>
             <nav class="nav">
-                <a href="#summary">Summary</a>
+                <a href="#project overview">Project Overview</a>
                 <a href="#baselines">Baselines</a>
                 <a href="#dataset">Dataset</a>
                 <a href="#implementation">Implementation</a>
                 <a href="#management">Management</a>
                 <a href="#results">Results</a>
+                <a href="#impact_&_limitations">Impact & Limitations</a>
             </nav>
         </div>
         <div class="authors wrap center">
-            <strong>Authors:</strong> Dhruv Goel, Jeet Joshi, Naren Kumar S., Pranav, Rahul Khirchar, Sai Krishna,
-            Simran Saini, Srajan Dehariya
+            <strong>Authors:</strong> Dhruv Goel, Jeet Joshi, Naren Kumar S., Pranav, Rahul Khichar, Sai Krishna,
+            Simran, Srajan Dehariya
         </div>
     </header>
 
     <main class="wrap-wide">
 
-        <section id="summary" class="hero card">
+        <section id="project_overview" class="hero card">
             <div class="hero-left">
                 <h2>Project Overview</h2>
                 <p>Benchmark to evaluate multimodal models on ordering shuffled image sequences using a reference image
@@ -55,7 +56,10 @@
                         </li>
                         <li>Didn't have reasoning for the patterns in the results.</li>
                         <li>Missing contribution in the Assignment 2.</li>
-                        <li>Alot of spelling and grammetical mistakes.</li>
+                        <li>A lot of spelling and grammatical mistakes.</li>
+                        <li>In meeting mostly we asked about the expected results from us and how to approach the
+                            problem.</li>
+                        <li>From the suggestions we got we implemented them in our work.</li>
                     </ul>
                 </div>
                 <h3>Ideas & Novelties</h3>
@@ -68,7 +72,13 @@
             <h2>Baselines & State-of-the-art</h2>
 
             <h3>State-of-the-art</h3>
-            <p>We are the first one to benchmarking on this task so their is no state-of-the-art.</p>
+            <ul>
+                <li>We are the first to do benchmarking on this task so there is no state-of-the-art and no existing
+                    baseline for this novelty.</li>
+                <li>Our work is different from existing work as no one has converted an action into 4 frames and then
+                    performed temporal ordering with a reference image and text in a zero-shot setting.</li>
+                <li>Most existing tasks are like Jigsaw puzzle solving and 24 frame classification.</li>
+            </ul>
 
             <h3>Random Baseline: 50%</h3>
 
@@ -278,7 +288,7 @@
                     </tr>
                 </tbody>
             </table>
-            
+
             <h3>Comparison with similar benchmarks</h3>
             <table class="striped">
                 <thead>
@@ -361,7 +371,7 @@
             </div>
 
             <h4>Output:</h4>
-            
+
             <table class="striped">
                 <thead>
                     <tr>
@@ -375,42 +385,73 @@
                     <tr>
                         <td class="center">InternVL3-8B</td>
                         <td class="center">[4,3,1,2]</td>
-                        <td class="center">The sequence follows the blooming stage of the flowers, starting from the most closed buds to the fully bloomed ones, depicted in a logical progression.</td>
+                        <td class="center">The sequence follows the blooming stage of the flowers, starting from the
+                            most closed buds to the fully bloomed ones, depicted in a logical progression.</td>
                         <td class="center">83.33</td>
                     </tr>
                     <tr>
                         <td class="center">Ovis2-16B</td>
                         <td class="center">[3,2,1,4]</td>
-                        <td class="center">The sequence follows the natural progression of a flowering branch, starting with the blossoms in full bloom, semi-closed blooms, buds, and ending with the onset of blossoms, illustrating the lifecycle of flowering.</td>
+                        <td class="center">The sequence follows the natural progression of a flowering branch, starting
+                            with the blossoms in full bloom, semi-closed blooms, buds, and ending with the onset of
+                            blossoms, illustrating the lifecycle of flowering.</td>
                         <td class="center">83.33</td>
                     </tr>
                     <tr>
                         <td class="center">Ovis2-8B</td>
                         <td class="center">[2,3,4,1]</td>
-                        <td class="center">This sequence starts with the branch in a state of closed buds, progresses through images with more buds opening and fewer closed, and culminates in images with fully opened white flowers. It accurately represents the natural process of buds opening.</td>
+                        <td class="center">This sequence starts with the branch in a state of closed buds, progresses
+                            through images with more buds opening and fewer closed, and culminates in images with fully
+                            opened white flowers. It accurately represents the natural process of buds opening.</td>
                         <td class="center">16.67</td>
                     </tr>
                     <tr>
                         <td class="center">Ovis2-4B</td>
                         <td class="center">[3,1,4,2]</td>
-                        <td class="center">The sequence of images appears to represent the progression of a cherry blossom's life cycle. The first image (1) shows a branch with blooming white flowers, which progresses to another image (3) showing buds, indicating early stages of blooming. Finally, the sequence culminates in an image (2) with dried flowers, symbolizing the end of the flowering period.</td>
+                        <td class="center">The sequence of images appears to represent the progression of a cherry
+                            blossom's life cycle. The first image (1) shows a branch with blooming white flowers, which
+                            progresses to another image (3) showing buds, indicating early stages of blooming. Finally,
+                            the sequence culminates in an image (2) with dried flowers, symbolizing the end of the
+                            flowering period.</td>
                         <td class="center">50.00</td>
                     </tr>
                     <tr>
-                        <td class="center">Qwen2.5-VL-7B</td>                        
+                        <td class="center">Qwen2.5-VL-7B</td>
                         <td class="center">[2,1,4,3]</td>
-                        <td class="center">The progression from full bloom to buds indicates the natural cycle of flowering.</td>
+                        <td class="center">The progression from full bloom to buds indicates the natural cycle of
+                            flowering.</td>
                         <td class="center">33.33</td>
                     </tr>
                 </tbody>
             </table>
-            
+
         </section>
 
         <section id="management" class="card">
             <div>
                 <h2>Project Management</h2>
-                <h4>Compute Resources</h4>
+
+                <h3>Novel Solution Proposed</h3>
+                <p>We proposed the novel solutions by first identifying a clear gap in existing research on multimodal
+                    and temporal reasoning. While many models today can understand single images or perform basic
+                    visual–text tasks, we noticed that very few systems are evaluated on their ability to reason about
+                    event progression or temporal order from unordered images. Most existing tasks focus on static
+                    recognition or only verify simple ordering patterns, without requiring full sequence reconstruction
+                    or multimodal understanding.</p>
+
+                <p>Through discussions with our mentor, we realized that there was no benchmark that asked a model to:
+                </p>
+                <ul>
+                    <li>Reorder a set of shuffled event frames.</li>
+                    <li>Use a reference image and text as the anchor of the sequence.</li>
+                </ul>
+
+                <p>This gap motivated us to design a benchmark that goes beyond static image interpretation and tests
+                    deeper temporal reasoning abilities. Our solution combines different domains evaluated on different
+                    MLLMs.</p>
+
+
+                <h3>Compute Resources</h3>
                 <div class="editable-box">
                     <ul>
                         <li>RAM: 48 GB of VRAM (GPU RAM)</li>
@@ -419,7 +460,7 @@
                     </ul>
                 </div>
 
-                <h4>Division of Work</h4>
+                <h3>Division of Work</h3>
                 <table class="striped authors-table">
                     <thead>
                         <tr>
@@ -438,22 +479,22 @@
                         </tr>
                         <tr>
                             <td class="center">Naren Kumar S.</td>
-                            <td class="center">Novelity proposed, literature review and paper writing</td>
+                            <td class="center">Novelty proposed, literature review and paper writing</td>
                         </tr>
                         <tr>
                             <td class="center">Pranav</td>
-                            <td class="center">Novelity proposed and dataset curation</td>
+                            <td class="center">Novelty proposed and dataset curation</td>
                         </tr>
                         <tr>
-                            <td class="center">Rahul Khirchar</td>
+                            <td class="center">Rahul Khichar</td>
                             <td class="center">Paper writing, dataset curation and metric calculation</td>
                         </tr>
                         <tr>
                             <td class="center">Sai Krishna</td>
-                            <td class="center">Novelity proposed and dataset curation</td>
+                            <td class="center">Novelty proposed and dataset curation</td>
                         </tr>
                         <tr>
-                            <td class="center">Simran Saini</td>
+                            <td class="center">Simran</td>
                             <td class="center">Paper writing, dataset curation and report writing</td>
                         </tr>
                         <tr>
@@ -604,16 +645,59 @@
             </table>
 
             <h3>Interpretation</h3>
-            <div class="editable-box">---</div>
+            <div class="editable-box">
+                <ul>
+                    <li>Most models are good at image ordering of daily routines, likely because these models are mostly
+                        trained on daily activities.</li>
+                    <li>Qwen2.5-VL-7B has the highest mean accuracy but it is the only model that performs poorly at
+                        image ordering
+                        of daily routines.</li>
+                    <li>InternVL3-8B has been the worst performing model, possibly because it is not trained for these
+                        types of tasks.
+                    </li>
+                    <li>Ovis2-16B, Ovis2-8B and Ovis2-4B gave almost similar results because they are all trained on
+                        similar dataset.</li>
+                    <li>The sports category has the lowest mean score because in sports, people are in motion and frame
+                        changes happen very quickly. The images might also be a little bit hazy because of this.
+                    </li>
+                </ul>
+            </div>
         </section>
 
-        <section class="card">
-            <h2>Future Work</h2>
+        <section id="impact_&_limitations" class="card">
+            <h2>Impact & Limitations</h2>
+
+            <h3>Impact</h3>
+            <p>
+                This benchmark provides a new way to evaluate how well multimodal models understand temporal
+                progression, causal relationships,
+                and narrative structure from unordered images. By combining a reference image, multiple event frames,
+                and textual context,
+                it enables a deeper assessment of visual–temporal reasoning than conventional static-image tasks. The
+                benchmark highlights
+                where current MLLMs struggle, especially in reasoning beyond object recognition, and helps guide the
+                development of more
+                context-aware and sequence-aware models.
+            </p>
+
+            <h3>Limitations</h3>
             <ul>
-                <li>Extend dataset to long events</li>
-                <li>Evaluate proprietary MLLMs</li>
-                <li>Next-frame generation tasks</li>
+                <li>The dataset has covered very few domains, so it should be expanded.</li>
+                <li>The current version of the benchmark focuses mainly on short, simple event sequences.</li>
+                <li>It should also be evaluated on other open-source MLLMs.</li>
+                <li>Additionally, the annotation process relies on manual selection of key frames, which may introduce
+                    subjective bias. There should be multi-annotator agreement.</li>
             </ul>
+
+            <h3>Future Work</h3>
+            <ul>
+                <li>Expanding the dataset.</li>
+                <li>Extend the dataset to longer, more complex multi-step events.</li>
+                <li>Evaluate on more proprietary MLLMs alongside open-source models.</li>
+                <li>Explore automated frame selection and annotation pipelines.</li>
+                <li>Can be expanded on temporal reasoning for ordering different videos and audios.</li>
+            </ul>
+
         </section>
 
     </main>
@@ -621,7 +705,6 @@
     <footer class="site-footer">
         <div class="wrap footer-grid">
             <div>Prepared for CS613 • IIT Gandhinagar</div>
-            <div>team@example.com</div>
         </div>
     </footer>
 
